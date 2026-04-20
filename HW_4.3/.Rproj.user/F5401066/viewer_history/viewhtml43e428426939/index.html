@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<script src="lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="lib/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="lib/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="lib/kePrint-0.0.1/kePrint.js"></script>
+<link href="lib/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+</head>
+<body>
+<table class=" lightable-classic lightable-striped" style='font-size: 16px; font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto;'>
+<caption style="font-size: initial !important;">Airport Stats by Year</caption>
+ <thead>
+  <tr>
+   <th style="text-align:center;"> Rank </th>
+   <th style="text-align:center;"> Airport </th>
+   <th style="text-align:center;"> Location </th>
+   <th style="text-align:center;"> Country </th>
+   <th style="text-align:center;"> Code </th>
+   <th style="text-align:center;"> Total_Passengers </th>
+   <th style="text-align:center;"> Rank_Change_percent </th>
+   <th style="text-align:center;"> year </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:center;"> 1 </td>
+   <td style="text-align:center;"> Hartsfield–Jackson Atlanta International Airport </td>
+   <td style="text-align:center;"> Atlanta, Georgia </td>
+   <td style="text-align:center;"> United States </td>
+   <td style="text-align:center;"> ATL/KATL </td>
+   <td style="text-align:center;"> 106302208 </td>
+   <td style="text-align:center;"> 01.6% </td>
+   <td style="text-align:center;"> 2025 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 8 </td>
+   <td style="text-align:center;"> Istanbul Airport </td>
+   <td style="text-align:center;"> Arnavutköy, Istanbul </td>
+   <td style="text-align:center;"> Turkey </td>
+   <td style="text-align:center;"> IST/LTFM </td>
+   <td style="text-align:center;"> 84457421 </td>
+   <td style="text-align:center;"> 05.0% </td>
+   <td style="text-align:center;"> 2025 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 11 </td>
+   <td style="text-align:center;"> Indira Gandhi International Airport </td>
+   <td style="text-align:center;"> Palam, Delhi </td>
+   <td style="text-align:center;"> India </td>
+   <td style="text-align:center;"> DEL/VIDP </td>
+   <td style="text-align:center;"> 78000000 </td>
+   <td style="text-align:center;"> 00.2% </td>
+   <td style="text-align:center;"> 2025 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 12 </td>
+   <td style="text-align:center;"> Seoul Incheon International Airport </td>
+   <td style="text-align:center;"> Jung District, Incheon </td>
+   <td style="text-align:center;"> South Korea </td>
+   <td style="text-align:center;"> ICN/RKSI </td>
+   <td style="text-align:center;"> 74071475 </td>
+   <td style="text-align:center;"> 04.1% </td>
+   <td style="text-align:center;"> 2025 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 21 </td>
+   <td style="text-align:center;"> Frankfurt Airport </td>
+   <td style="text-align:center;"> Frankfurt, Hesse </td>
+   <td style="text-align:center;"> Germany </td>
+   <td style="text-align:center;"> FRA/EDDF </td>
+   <td style="text-align:center;"> 63189666 </td>
+   <td style="text-align:center;"> 02.6% </td>
+   <td style="text-align:center;"> 2025 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 35 </td>
+   <td style="text-align:center;"> Beijing Daxing International Airport </td>
+   <td style="text-align:center;"> Daxing District, Beijing </td>
+   <td style="text-align:center;"> China </td>
+   <td style="text-align:center;"> PKX/ZBAD </td>
+   <td style="text-align:center;"> 53618949 </td>
+   <td style="text-align:center;"> 08.4% </td>
+   <td style="text-align:center;"> 2025 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 1 </td>
+   <td style="text-align:center;"> Hartsfield–Jackson Atlanta International Airport </td>
+   <td style="text-align:center;"> Atlanta, Georgia </td>
+   <td style="text-align:center;"> United States </td>
+   <td style="text-align:center;"> ATL/KATL </td>
+   <td style="text-align:center;"> 108067766 </td>
+   <td style="text-align:center;"> 03.3% </td>
+   <td style="text-align:center;"> 2024 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 7 </td>
+   <td style="text-align:center;"> Istanbul Airport </td>
+   <td style="text-align:center;"> Arnavutköy, Istanbul </td>
+   <td style="text-align:center;"> Turkey </td>
+   <td style="text-align:center;"> IST/LTFM </td>
+   <td style="text-align:center;"> 80073252 </td>
+   <td style="text-align:center;"> 05.3% </td>
+   <td style="text-align:center;"> 2024 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 9 </td>
+   <td style="text-align:center;"> Indira Gandhi International Airport </td>
+   <td style="text-align:center;"> Palam, Delhi </td>
+   <td style="text-align:center;"> India </td>
+   <td style="text-align:center;"> DEL/VIDP </td>
+   <td style="text-align:center;"> 77820834 </td>
+   <td style="text-align:center;"> 07.8% </td>
+   <td style="text-align:center;"> 2024 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 13 </td>
+   <td style="text-align:center;"> Seoul Incheon International Airport </td>
+   <td style="text-align:center;"> Jung District, Incheon </td>
+   <td style="text-align:center;"> South Korea </td>
+   <td style="text-align:center;"> ICN/RKSI </td>
+   <td style="text-align:center;"> 71212515 </td>
+   <td style="text-align:center;"> 26.6% </td>
+   <td style="text-align:center;"> 2024 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 21 </td>
+   <td style="text-align:center;"> Frankfurt Airport </td>
+   <td style="text-align:center;"> Frankfurt, Hesse </td>
+   <td style="text-align:center;"> Germany </td>
+   <td style="text-align:center;"> FRA/EDDF </td>
+   <td style="text-align:center;"> 61564957 </td>
+   <td style="text-align:center;"> 03.7% </td>
+   <td style="text-align:center;"> 2024 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 38 </td>
+   <td style="text-align:center;"> Beijing Daxing International Airport </td>
+   <td style="text-align:center;"> Daxing District, Beijing </td>
+   <td style="text-align:center;"> China </td>
+   <td style="text-align:center;"> PKX/ZBAD </td>
+   <td style="text-align:center;"> 49441029 </td>
+   <td style="text-align:center;"> 25.5% </td>
+   <td style="text-align:center;"> 2024 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 1 </td>
+   <td style="text-align:center;"> Hartsfield–Jackson Atlanta International Airport </td>
+   <td style="text-align:center;"> Atlanta, Georgia </td>
+   <td style="text-align:center;"> United States </td>
+   <td style="text-align:center;"> ATL/KATL </td>
+   <td style="text-align:center;"> 104653451 </td>
+   <td style="text-align:center;"> 11.7% </td>
+   <td style="text-align:center;"> 2023 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 7 </td>
+   <td style="text-align:center;"> Istanbul Airport </td>
+   <td style="text-align:center;"> Arnavutköy, Istanbul </td>
+   <td style="text-align:center;"> Turkey </td>
+   <td style="text-align:center;"> IST/LTFM </td>
+   <td style="text-align:center;"> 76027321 </td>
+   <td style="text-align:center;"> 18.3% </td>
+   <td style="text-align:center;"> 2023 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 10 </td>
+   <td style="text-align:center;"> Indira Gandhi International Airport </td>
+   <td style="text-align:center;"> Palam, Delhi </td>
+   <td style="text-align:center;"> India </td>
+   <td style="text-align:center;"> DEL/VIDP </td>
+   <td style="text-align:center;"> 72214841 </td>
+   <td style="text-align:center;"> 21.4% </td>
+   <td style="text-align:center;"> 2023 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 16 </td>
+   <td style="text-align:center;"> Frankfurt Airport </td>
+   <td style="text-align:center;"> Frankfurt, Hesse </td>
+   <td style="text-align:center;"> Germany </td>
+   <td style="text-align:center;"> FRA/EDDF </td>
+   <td style="text-align:center;"> 59355389 </td>
+   <td style="text-align:center;"> 21.3% </td>
+   <td style="text-align:center;"> 2023 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 20 </td>
+   <td style="text-align:center;"> Seoul Incheon International Airport </td>
+   <td style="text-align:center;"> Incheon </td>
+   <td style="text-align:center;"> South Korea </td>
+   <td style="text-align:center;"> ICN/RKSI </td>
+   <td style="text-align:center;"> 56235412 </td>
+   <td style="text-align:center;"> 213.8% </td>
+   <td style="text-align:center;"> 2023 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 1 </td>
+   <td style="text-align:center;"> Hartsfield–Jackson Atlanta International Airport </td>
+   <td style="text-align:center;"> Atlanta, Georgia </td>
+   <td style="text-align:center;"> United States </td>
+   <td style="text-align:center;"> ATL/KATL </td>
+   <td style="text-align:center;"> 93699630 </td>
+   <td style="text-align:center;"> 23.8% </td>
+   <td style="text-align:center;"> 2022 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 7 </td>
+   <td style="text-align:center;"> Istanbul Airport </td>
+   <td style="text-align:center;"> Arnavutköy, Istanbul </td>
+   <td style="text-align:center;"> Turkey </td>
+   <td style="text-align:center;"> IST/LTFM </td>
+   <td style="text-align:center;"> 64289107 </td>
+   <td style="text-align:center;"> 73.8% </td>
+   <td style="text-align:center;"> 2022 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 9 </td>
+   <td style="text-align:center;"> Indira Gandhi International Airport </td>
+   <td style="text-align:center;"> Palam, Delhi </td>
+   <td style="text-align:center;"> India </td>
+   <td style="text-align:center;"> DEL/VIDP </td>
+   <td style="text-align:center;"> 59490074 </td>
+   <td style="text-align:center;"> 60.2% </td>
+   <td style="text-align:center;"> 2022 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 18 </td>
+   <td style="text-align:center;"> Frankfurt Airport </td>
+   <td style="text-align:center;"> Frankfurt, Hesse </td>
+   <td style="text-align:center;"> Germany </td>
+   <td style="text-align:center;"> FRA/EDDF </td>
+   <td style="text-align:center;"> 48918482 </td>
+   <td style="text-align:center;"> 97.2% </td>
+   <td style="text-align:center;"> 2022 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 1 </td>
+   <td style="text-align:center;"> Hartsfield–Jackson Atlanta International Airport </td>
+   <td style="text-align:center;"> Atlanta, Georgia </td>
+   <td style="text-align:center;"> United States </td>
+   <td style="text-align:center;"> ATL/KATL </td>
+   <td style="text-align:center;"> 75704760 </td>
+   <td style="text-align:center;"> 76.4% </td>
+   <td style="text-align:center;"> 2021 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 13 </td>
+   <td style="text-align:center;"> Indira Gandhi International Airport </td>
+   <td style="text-align:center;"> Delhi </td>
+   <td style="text-align:center;"> India </td>
+   <td style="text-align:center;"> DEL/VIDP </td>
+   <td style="text-align:center;"> 37139957 </td>
+   <td style="text-align:center;"> 30.3% </td>
+   <td style="text-align:center;"> 2021 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 14 </td>
+   <td style="text-align:center;"> Istanbul Airport </td>
+   <td style="text-align:center;"> Arnavutköy, Istanbul </td>
+   <td style="text-align:center;"> Turkey </td>
+   <td style="text-align:center;"> IST/LTFM </td>
+   <td style="text-align:center;"> 36988563 </td>
+   <td style="text-align:center;"> 58.5% </td>
+   <td style="text-align:center;"> 2021 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 37 </td>
+   <td style="text-align:center;"> Beijing Daxing International Airport </td>
+   <td style="text-align:center;"> Daxing District, Beijing </td>
+   <td style="text-align:center;"> China </td>
+   <td style="text-align:center;"> PKX/ZBAD </td>
+   <td style="text-align:center;"> 25051012 </td>
+   <td style="text-align:center;"> 55.7% </td>
+   <td style="text-align:center;"> 2021 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 39 </td>
+   <td style="text-align:center;"> Frankfurt Airport </td>
+   <td style="text-align:center;"> Frankfurt, Hesse </td>
+   <td style="text-align:center;"> Germany </td>
+   <td style="text-align:center;"> FRA/EDDF </td>
+   <td style="text-align:center;"> 24812849 </td>
+   <td style="text-align:center;"> 32.2% </td>
+   <td style="text-align:center;"> 2021 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 2 </td>
+   <td style="text-align:center;"> Hartsfield–Jackson Atlanta International Airport </td>
+   <td style="text-align:center;"> Atlanta, Georgia </td>
+   <td style="text-align:center;"> United States </td>
+   <td style="text-align:center;"> ATL/KATL </td>
+   <td style="text-align:center;"> 42918685 </td>
+   <td style="text-align:center;"> 61.2% </td>
+   <td style="text-align:center;"> 2020 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 16 </td>
+   <td style="text-align:center;"> Indira Gandhi International Airport </td>
+   <td style="text-align:center;"> Delhi </td>
+   <td style="text-align:center;"> India </td>
+   <td style="text-align:center;"> DEL/VIDP </td>
+   <td style="text-align:center;"> 28500545 </td>
+   <td style="text-align:center;"> 58.4% </td>
+   <td style="text-align:center;"> 2020 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 20 </td>
+   <td style="text-align:center;"> Istanbul Airport </td>
+   <td style="text-align:center;"> Arnavutköy, Istanbul </td>
+   <td style="text-align:center;"> Turkey </td>
+   <td style="text-align:center;"> IST/LTFM </td>
+   <td style="text-align:center;"> 23330411 </td>
+   <td style="text-align:center;"> 55.3% </td>
+   <td style="text-align:center;"> 2020 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 37 </td>
+   <td style="text-align:center;"> Frankfurt Airport </td>
+   <td style="text-align:center;"> Frankfurt, Hesse </td>
+   <td style="text-align:center;"> Germany </td>
+   <td style="text-align:center;"> FRA/EDDF </td>
+   <td style="text-align:center;"> 18768601 </td>
+   <td style="text-align:center;"> 73.4% </td>
+   <td style="text-align:center;"> 2020 </td>
+  </tr>
+</tbody>
+</table> <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}})</script><script async src="https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
