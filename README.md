@@ -7,7 +7,7 @@ This repository houses the file information pertaining to
 the project from HW 4.3 assigned by the STAT 184 course. 
 
 The purpose of this repository is to keep everything up 
-to date and organized with the project files and informaiton.
+to date and organized with the project files and information.
 
 # Data information
 Airports Data:
@@ -21,15 +21,15 @@ Calcium Study:
 The data used in the GenAI section of the project
 was provided by the instructor of STAT 184, and was 
 obtained from a study that conducted calcium 
-measurements of the ulna of 31 women over hte course 
+measurements of the ulna of 31 women over the course 
 of four years. 
 
 # Plan
-Goals: 
+The Current plan for the project is to update and maintain
+the quarto document from hw 4.3. 
 
-Needs:
-
-Steps: 
+All improvements and changes will be recorder within this 
+repository.
 
 # Organization
 This Repository contains the files necessary for the
