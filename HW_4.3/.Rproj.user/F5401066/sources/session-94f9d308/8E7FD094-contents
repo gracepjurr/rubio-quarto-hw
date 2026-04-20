@@ -1,0 +1,120 @@
+#' Busiest Airports Data
+#'
+#' @description
+#' Using the original data from Wikipedia, use wrangling and tidying techniques to output a 
+#' new data frame where each case is by individual service member. Then use that data to create
+#' a table representation and visual graph/ plot.
+
+
+## STEP 1: Import the data
+# Scrap Data From Web
+airportList <- read_html(
+  x = "https://en.wikipedia.org/wiki/List_of_busiest_airports_by_passenger_traffic"
+) |>
+  html_elements(css = "table") |>
+  html_table()
+
+
+### STEP 2: Clean and Wrangle Data
+# Create the separate raw data frames of airport stats by year (2020 - 2025)
+# Similar process to HW 3.1
+
+# Isolate 6 of the busiest airports 
+airport_codes <- c('FRA', 'PKX', 'ATL', 'DEL', 'ICN', 'IST') # the six airports we will look into
+combined_airports <- paste(airport_codes, collapse = "|") # add the 'or' operator for grepl function later
+
+airportStats_List <- list() # initialize a list to add data frames to
+year <- 2025 # initialize the start year of the data
+
+# Iterate through each year, tidy it then add to the list
+for (i in 2:7){
+  airportStatsRaw <- bind_cols(airportList[[i]])
+  
+  airportStats <- airportStatsRaw|>
+    rename(# Rename the cols of the new df 
+      Rank = 1,
+      Airport = 2,
+      Location = 3,
+      Country = 4,
+      Code = 5,
+      Total_Passengers = 6,
+      Rank_Change = 7,
+      Rank_Change_percent = 8
+      )|>
+    select( #remove Rank Change since it does not tell us direction of change 
+      # (and we can determine this ourselves by comparing previous year ranking)
+      -Rank_Change)|>
+    filter(grepl(combined_airports, Code))|> #filter the six airports we want
+    mutate(# add an additional column for the year
+      year = year)|> 
+    mutate( # Make the total passenger column integers
+      Total_Passengers = as.numeric( # remove any footnotes that were left after web scraping
+        str_remove_all(
+          str_remove(Total_Passengers, "\\[.*"), # remove anything after '[' (start of footnote)
+            ","
+          )
+        ))
+  airportStats_List[[i-1]] <- airportStats # Store new tables in the list
+  
+  year <- year -1 # decrease by one year for next iteration
+}
+
+best_airportStats <- bind_rows(airportStats_List) # combine all df into one
+  
+
+### STEP 3: Create a Rendered Table 
+airportTable <- best_airportStats|>
+  tabyl(Country,year)|>
+  adorn_totals(where = c('row','col'))|>
+  adorn_percentages(denominator = 'all')|>
+  adorn_pct_formatting(digits = 2)|>
+  adorn_title(
+    placement = 'combined',
+    row_name = 'Country',
+    col_name = 'Year'
+  )
+
+formatNs <- attr(airportTable,'core')|>
+  adorn_totals(where = c('row','col'))|>
+  mutate(
+    across(where(is.numeric),format,big.mark='')
+  )
+
+airportFreqTable <- airportTable|>
+  adorn_ns(position = 'front', ns=formatNs)
+
+airportTable <- best_airportStats|> # Create Statistics Table
+  kable(
+    caption = "Airport Stats by Year",
+    digits = 0, # Round to an integer value (should already be int)
+    align = 'c'
+  )|>
+  kable_classic(
+    lightable_options = 'striped',
+    font_size = 16
+  )
+
+airportTable
+
+
+# STEP 4: GRAPHING
+
+# Use {esquisse} to test out potential plot types
+esquisser(
+  data = best_airportStats,
+  viewer = "browser" # Opens the tool up in your default browser instead of RStudio
+)
+
+# Line graph of the total passengers of six airports over five years
+
+ggplot(best_airportStats) +
+  aes(x = year, y = Total_Passengers, color = Code) +
+  geom_line() +
+  scale_color_hue(direction = 1) +
+  theme_minimal()+
+  labs(
+    x = "Year",
+    y = "Total Passengers",
+    color = "Airport Code"
+  )
+
