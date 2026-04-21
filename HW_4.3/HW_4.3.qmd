@@ -26,6 +26,10 @@ editor:
 ```{r}
 #| label: loadPackages
 #| results: hide
+
+### ---- Coding Style ---- ###
+# The coding Style being implemented is the Tidyverse Style
+
 ### ---- Load useful packages ---- ###
 packages <- c("tidyverse", "janitor", "kableExtra", "knitr", "rvest", "patchwork")
 lapply(
