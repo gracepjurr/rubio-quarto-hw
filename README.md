@@ -17,7 +17,7 @@ web scraping techniques. It contained tables of
 busiest airports in the world and their passenger
 traffic/ rating over a five year period (2020-2025).
 
-Calcium Study:
+Ulna Calcium Measurment Study:
 The data used in the GenAI section of the project
 was provided by the instructor of STAT 184, and was 
 obtained from a study that conducted calcium 
