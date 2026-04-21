@@ -74,8 +74,10 @@ The below visualizations can help illustrate the intense volume of traffic exper
 # Similar process to HW 3.1
 
 # Isolate six of the busiest airports 
-airport_codes <- c('FRA', 'PKX', 'ATL', 'DEL', 'ICN', 'IST') # the six airports we will look into
-combined_airports <- paste(airport_codes, collapse = "|") # add the 'or' operator for grepl function later
+# the six airports we will look into
+airport_codes <- c('FRA', 'PKX', 'ATL', 'DEL', 'ICN', 'IST') 
+# add the 'or' operator for grepl function later
+combined_airports <- paste(airport_codes, collapse = "|") 
 
 airportStats_List <- list() # initialize a list to add data frames to
 year <- 2025 # initialize the start year of the data
@@ -102,9 +104,10 @@ for (i in 2:7){
     mutate(# add an additional column for the year
       year = year)|> 
     mutate( # Make the total passenger column integers
-      Total_Passengers = as.numeric( # remove any footnotes that were left after web scraping
-        str_remove_all(
-          str_remove(Total_Passengers, "\\[.*"), # remove anything after '[' (start of footnote)
+      Total_Passengers = as.numeric( 
+        # remove any footnotes that were left after web scraping
+        str_remove_all(# remove anything after '[' (start of footnote)
+          str_remove(Total_Passengers, "\\[.*"), 
             ","
           )
         ))
@@ -159,7 +162,7 @@ We can see this is @fig-line below.
 ```{r}
 #| label: fig-line
 #| fig-cap: "Passenger totals by airport and year (2020–2025)"
-#| fig-alt: "Line graph showing passenger numbers from 2020-2025 for six airports, with Atlanta (ATL) showing the highest growth."
+#| fig-alt: "Line graph showing passenger numbers from 2020-2025 for six airports."
 
 # Code for the Graph ---
 
@@ -249,9 +252,10 @@ f <- function(x){
 
 
 ## Create a function that makes a new df for an input of n simulations
-create_df<- function(n){# create a function that returns a df depending upon the input n number of trials
-
-  df<- mon_carlo(n, upper_x=1, lower_x=0, upper_y=1.5, lower_y=0) # we can set these params to default
+create_df<- function(n){
+# create a function that returns a df depending upon the input n number of trials
+  df<- mon_carlo(n, upper_x=1, lower_x=0, upper_y=1.5, lower_y=0) 
+  # we can set these params to default
   
   # Check where each ordered pair lies on the helper function
   location<- sapply(
@@ -260,8 +264,11 @@ create_df<- function(n){# create a function that returns a df depending upon the
       f(x)}
   )
   
-  onFunction_vec <- numeric(n) # will include results of whether points above function or not
-  onBelow <- 0 # num of points on/ below function (helpful for proportion (p) later)
+  onFunction_vec <- numeric(n) 
+  # will include results of whether points above function or not
+ 
+   onBelow <- 0 
+  # num of points on/ below function (helpful for proportion (p) later)
   
   for (i in 1:n){
     y <- df$y[i] # extract single element from y column at index i
@@ -287,7 +294,7 @@ create_df<- function(n){# create a function that returns a df depending upon the
 ```{r}
 #| label: fig-smallMultiple
 #| fig-cap: "Monte Carlo Estimation Over Increasing n Sample Sizes"
-#| fig-alt: "Four scatter plots with data points above and on/below a curve, differentiated by color."
+#| fig-alt: "Four scatter plots with data points above and on/below a curve."
 #| fig-width: 10
 #| fig-height: 6
 
@@ -311,7 +318,8 @@ for (i in c(10, 100, 1000, 10000)){# loop through to create a plot for each n va
   plotList[[i]]<-plot # add to list
 }
 
-plotList[[10]]+plotList[[100]]+plotList[[1000]]+plotList[[10000]] # combine into small multiples
+plotList[[10]]+plotList[[100]]+plotList[[1000]]+plotList[[10000]] 
+# combine into small multiples
 
 ```
 
@@ -474,7 +482,7 @@ Long Description: The image is a line graph titled "Average Values per Column." 
 ```{r}
 #| label: fig-ulnaCalcium
 #| fig-cap: "Ulna Calcium Measurments of 31 Women Over Four Years"
-#| fig-alt: "Two Bar graphs representing a control group and a diet-excercise treatment group. The total calcium in the ulna is measured for each group per year over four years."
+#| fig-alt: "Two Bar graphs representing a control group and a diet-excercise treatment group."
 #| echo: false
 
 ### ---- Code for personal results of ulna calcium data ---- ###
