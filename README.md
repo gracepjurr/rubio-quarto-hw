@@ -1,7 +1,6 @@
 # rubio-quarto-hw
 HW 4.4: practice with github using Quarto file from HW 4.3 
 
-
 # About
 This repository houses the file information pertaining to 
 the project from HW 4.3 assigned by the STAT 184 course. 
@@ -17,7 +16,7 @@ web scraping techniques. It contained tables of
 busiest airports in the world and their passenger
 traffic/ rating over a five year period (2020-2025).
 
-Ulna Calcium Measurment Study:
+Calcium Study:
 The data used in the GenAI section of the project
 was provided by the instructor of STAT 184, and was 
 obtained from a study that conducted calcium 
@@ -47,4 +46,3 @@ Email: abc123@psu.edu
 
 In person Hours and locations:
 Mon-Fri 12 - 2 PM in Westgate
-
