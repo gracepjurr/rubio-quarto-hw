@@ -1,0 +1,83 @@
+Plan Document 
+HW 4.4 
+April 20th, 2026
+
+Goal(s) for the Quarto project: 
+Create a Quarto document in RStudio that creates a pdf containing the results of the busiest airport data, Monte Carlo, and GenAI prompting formatted around their alt text, long description, and narratives.
+Sub-goal:
+- Improve the busiest airport data table and graph outputs. (And overall HW 3.4 code).
+- Format Quarto Document using a strong YAML header
+- Format Code Appendix/ GenAI Appendix correctly
+Needs:
+Nouns:
+- YAML header
+- Code from HW 3.4
+- Code chunks 
+- Visualizations
+- Appendix
+- Busiest Airport data
+- Ulna Calcium Measurement data 
+- Generic prompt to ChatGPT
+- Packages: tidyverse}, {rvest}, {janitor}, {kableExtra}, {knitr}, {patchwork}
+- ALT text, Long Description, Narrative
+- ASU Image accessibility tool
+- Header
+- Ggplot2 for graphing
+Verbs:
+- Load in the data
+- Render the document
+- Prompt the GenAI
+- Improve/ Polish
+- Plan
+- Cite (GenAi usage)
+- Organize
+- Clean/ tidy/ Wrangle (the data)
+- 
+Steps:
+1. Start with a YAML header that includes the correct format of a PDF output. For clearer formatting, include a table of contents (toc) that will automatically format the rest of the paper. 
+o Make sure code chunks do not show up in the body of the paper by setting echo to False. 
+2. Include a code appendix using a dynamic Quarto function that updates/ formats all code chunks automatically.
+3. Upload all the packages that will be needed for the body of the paper. Then upload any data that will be used for any of the visualizations. Complete these tasks in separate chunks for better clarity and function. 
+4. Ensure all sections are clearly labeled with accurate header names and sizes.
+5. Render the document between steps to ensure everything is working/ looking as intended. 
+6. Start the body of the paper with the first task of the busiest airport data/code. Improve/polish the code to ensure the task is correctly answered for the hw 3.4 question. Then add in/ format the data. 
+7. For any figures/ tables include an accurate header, then use ASU’s accessible image tool to generate the ALT text and long description. Write up a thoughtful narrative based on the results seen in both the table and the graph. 
+8. Next, improve upon the code from the Monte Carlo problem from hw 3.4. Add in the graph using a strong header. 
+9. Again, using ASU’s image tool, generate the ALT text and long description. Write up a thoughtful narrative based on the results seen from the graph.
+10. In the final section of the body, choose a GenAI interface and then create a plan for how to clean/ wrangle the calcium dataset to create a graph. From the plan, create the results on your own.
+11. Use the plan from above to prompt the chosen GenAI, then include the response in the paper. Include the response to the generic prompt given, then compare the results with the plan-prompted response and your personal output. 
+12. Finally, cite all sources and uses of GenAI. Make sure to include in-text citations. 
+13. Review and proofread the final file. polish, improve, then submit. 
+
+Goal(s) for setting up and maintaining the repo: 
+Create and maintain a repository that houses the Quarto QMD and PDF files from HW 4.3.
+Sub-goals: 
+- Create a new repository, then add files to the repo
+- Commit/ push/ pull/ merge all changes and improvements 
+Needs:
+Nouns:
+- Github (web and desktop)
+- HW 4.3 files (QMD, PDF, any data/ images that were used)
+- README file
+- RStudio
+- Branch 
+Verbs:
+- Push 
+- Pull
+- Commit 
+- Merge
+- Request
+- Create (an Issue)
+- Resolve an issue 
+Steps:
+1. Go to the desktop GitHub and create a new repository. Name it something relevant to the project we will be adding. 
+2. Open the repository on your computer's file explorer and copy the file information into the repository file. Commit these changes to the main branch.
+3. Now that the repository has all the files needed, create a branch to focus on updating files (specifically the QMD) to ensure all paths are updated. 
+4. Commit all changes (ensure commit summary is well formatted), push to main, then pull/ merge the request.
+5. Create issues of what still needs to be completed (update README, add plan, etc..). Resolve/ close issues as necessary. 
+6. In the same branch, update the README file with the requirements. Commit, push, pull.
+7. Creating a new branch to complete this task, add the plan for maintaining/ creating a repository to the repo itself.
+8. Complete/ resolve any other remaining issues- make sure to commit/ push, merge, pull after all changes. 
+9. To maintain the repository, ensure to commit/ push every night, then pull the next morning, repeat for as long as the repository is active. 
+ 
+
